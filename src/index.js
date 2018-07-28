@@ -1,23 +1,27 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { DashboardMenu } from "./dashboard/dashboard-menu/dashboard-menu";
-import { MenuItem } from "./common/menu-item/menu-item";
+import { DashboardMenuItem } from "./dashboard/dashboard-menu-item/dashboard-menu-item";
 import { Icon } from "./common/icon/icon";
 
 ReactDOM.render(
   <DashboardMenu onSelectionChanged={console.log}>
-    <MenuItem name="project">
+    <DashboardMenuItem name="project">
       <Icon type="project-diagram" />
       Project
-    </MenuItem>
-    <MenuItem name="build">
+    </DashboardMenuItem>
+    <DashboardMenuItem name="build">
       <Icon type="code" />
       Build
-    </MenuItem>
-    <MenuItem name="git">
+    </DashboardMenuItem>
+    <DashboardMenuItem name="git">
       <Icon type="code-branch" />
       Git
-    </MenuItem>
+    </DashboardMenuItem>
+    <DashboardMenuItem name="git">
+      <Icon type="list-ul" />
+      My Todo List
+    </DashboardMenuItem>
   </DashboardMenu>,
   document.getElementById("application")
 );
