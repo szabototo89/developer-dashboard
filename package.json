@@ -7,6 +7,7 @@
     "start": "parcel src/index.html --open"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "reset-css": "^4.0.1"
