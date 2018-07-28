@@ -1,22 +1,24 @@
 .menu-item {
   & {
-    color: #AAB0C4;
+    color: #aab0c4;
     height: 3rem;
     line-height: 3rem;
-    padding-left: 45px;
+    padding-left: 85px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    position: relative;
   }
 
   &--active {
     & {
-      color: #3C86F2;
+      color: #3c86f2;
       position: relative;
     }
 
     &:before {
-      content: '';
+      content: "";
       width: 4px;
       height: 100%;
       left: 0;
