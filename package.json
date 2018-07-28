@@ -5,7 +5,7 @@
   "license": "MIT",
 
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html --open"
   },
 
   "dependencies": {
