@@ -2,6 +2,6 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Application } from "./application/application";
 
-import "babel-polyfill"
+import "babel-polyfill";
 
 ReactDOM.render(<Application />, document.getElementById("application"));

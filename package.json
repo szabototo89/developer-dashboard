@@ -1,7 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "start:developer-dashboard": "lerna run --stream --scope developer-dashboard start"
+  },
   "devDependencies": {
     "lerna": "^3.0.0-rc.0"
+  },
+  "dependencies": {
+    "prettier": "^1.14.0"
   }
 }

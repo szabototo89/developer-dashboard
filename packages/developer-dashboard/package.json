@@ -1,22 +1,25 @@
 {
-	"name": "developer-dashboard",
-	"version": "1.0.0",
-	"main": "index.js",
-	"license": "MIT",
-	"dependencies": {
-		"@fortawesome/fontawesome-free": "^5.2.0",
-		"react": "^16.4.1",
-		"react-dom": "^16.4.1",
-		"reset-css": "^4.0.1"
-	},
-	"devDependencies": {
-		"babel-plugin-transform-runtime": "^6.23.0",
-		"babel-preset-env": "^1.7.0",
-		"babel-preset-react": "^6.24.1",
-		"babel-runtime": "^6.26.0",
-		"lerna": "^3.0.0-rc.0",
-		"node-sass": "^4.9.2",
-		"parcel-bundler": "^1.9.7",
-		"prettier": "^1.13.7"
-	}
+  "name": "developer-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html --open"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "reset-css": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "lerna": "^3.0.0-rc.0",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.13.7"
+  }
 }
