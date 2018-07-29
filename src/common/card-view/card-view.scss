@@ -1,0 +1,16 @@
+.card-view {
+  & {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+
+    padding-bottom: 5px;
+  }
+
+  &__value {
+    color: black;
+  }
+}
