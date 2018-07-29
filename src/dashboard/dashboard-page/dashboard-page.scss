@@ -1,0 +1,11 @@
+.dashboard-page {
+  &__header {
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+  }
+
+  &__body {
+    color: #bcc0cc;
+  }
+}
