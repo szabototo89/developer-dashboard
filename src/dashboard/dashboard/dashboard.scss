@@ -1,0 +1,17 @@
+.dashboard {
+  & {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    height: 100%;
+  }
+
+  &__menu {
+    grid-column: 1;
+    display: flex;
+    justify-items: stretch;
+  }
+
+  &__content {
+    padding: 50px;
+  }
+}
