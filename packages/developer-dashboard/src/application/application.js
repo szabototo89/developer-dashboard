@@ -8,7 +8,7 @@ import { Dashboard } from "../dashboard/dashboard/dashboard";
 import { Component } from "react";
 import { ProjectPage } from "../project/project-page/project-page";
 
-const fetchAsJson = async (url) => (await fetch(url)).json();
+const fetchAsJson = async url => (await fetch(url)).json();
 
 export class Application extends Component {
   constructor(...args) {
@@ -31,8 +31,9 @@ export class Application extends Component {
     const project = await fetchAsJson("http://localhost:80/project");
 
     const projectDescriptor = Object.assign({}, project, {
-      scripts: await fetchAsJson('http://localhost:80/project/script')
+      scripts: await fetchAsJson("http://localhost:80/project/script")
     });
+
     this.setState(() => ({
       projectDescriptor
     }));
