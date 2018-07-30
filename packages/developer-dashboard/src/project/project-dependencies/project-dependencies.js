@@ -8,11 +8,18 @@ export const ProjectDependencies = ({ dependencies = [] }) => {
       items={dependencies}
       renderRow={({ TableCellView, item }) => (
         <React.Fragment>
-          <TableCellView>{item.name}</TableCellView>
+          <TableCellView>
+            <a
+              href={`https://www.npmjs.com/package/${item.name}`}
+              target="_blank"
+            >
+              {item.name}
+            </a>
+          </TableCellView>
           <TableCellView>{item.specifiedVersion}</TableCellView>
           <TableCellView>{item.actualVersion}</TableCellView>
         </React.Fragment>
-      )} 
+      )}
     />
   );
 };

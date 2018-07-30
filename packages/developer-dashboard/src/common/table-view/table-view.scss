@@ -6,11 +6,19 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
+
+    background-color: #aab0c4;
+    color: white;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 0.7rem;
   }
 
   &__row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
+    margin-top: 10px;
+    font-size: 0.875rem;
   }
 }
