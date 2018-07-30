@@ -1,6 +1,7 @@
 import React from "react";
 import { DashboardPage } from "../../dashboard/dashboard-page/dashboard-page";
 import { CardView } from "../../common/card-view/card-view";
+import { ProjectDependencies } from "../project-dependencies/project-dependencies";
 
 export const ProjectPage = ({ projectDescriptor = {} }) => {
   return (
@@ -16,6 +17,10 @@ export const ProjectPage = ({ projectDescriptor = {} }) => {
         {projectDescriptor.scripts.map(({ name, command }) => (
           <CardView label={name}>{command}</CardView>
         ))}
+      </CardView>
+
+      <CardView label="Dependencies">
+        <ProjectDependencies dependencies={projectDescriptor.dependencies} />
       </CardView>
     </DashboardPage>
   );
