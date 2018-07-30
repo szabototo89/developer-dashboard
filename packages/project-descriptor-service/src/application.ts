@@ -3,8 +3,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { readNpmPackageDescriptor } from "./read-npm-package-descriptor";
 import { getNpmScripts } from "./get-npm-scripts";
-import { execSync } from "child_process";
-import { ok } from "assert";
 
 export function getWatchPath() {
   const applicationArguments = process.argv.slice(2);

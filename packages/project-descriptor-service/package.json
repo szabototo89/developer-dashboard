@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start:nodemon": "nodemon dist/index.js",
+    "start:nodemon": "nodemon ./dist/index.js",
     "start:build": "parcel index.ts --target=node",
     "start": "npm-run-all --parallel start:build start:nodemon"
   },
