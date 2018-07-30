@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { readNpmPackageDescriptor } from "./read-npm-package-descriptor";
 import { getNpmScripts } from "./get-npm-scripts";
+import { getProjectDependencies } from "./get-project-dependencies";
 
 export function getWatchPath() {
   const applicationArguments = process.argv.slice(2);
@@ -25,7 +26,15 @@ export function initializeApplication({ portNumber = 80 } = {}) {
     response.json(npmScripts);
   });
 
+  application.get("/project/dependency", (request, response) => {
+    const packageDescriptor = readNpmPackageDescriptor(getWatchPath());
+    const projectDependencies = getProjectDependencies(packageDescriptor);
+    response.json(projectDependencies);
+  });
+
   application.listen(portNumber, () =>
-    console.log(`Project Descriptor Service is running on http://localhost:${portNumber}`)
+    console.log(
+      `Project Descriptor Service is running on http://localhost:${portNumber}`
+    )
   );
 }
