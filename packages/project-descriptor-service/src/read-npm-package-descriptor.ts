@@ -1,12 +1,21 @@
 import fs from "fs";
 import path from "path";
 
+export type ProjectName = string;
+export type ProjectVersion = string;
+
 export interface NpmPackageDescriptor {
   type: "npm";
   name: string;
   description: string;
   scripts: {
     [key: string]: string;
+  };
+  dependencies: {
+    [projectName: ProjectName]: ProjectVersion;
+  };
+  devDependencies: {
+    [projectName: ProjectName]: ProjectVersion;
   };
 }
 
