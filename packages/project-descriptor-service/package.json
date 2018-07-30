@@ -1,0 +1,33 @@
+{
+  "name": "project-descriptor-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:nodemon": "nodemon ./dist/index.js",
+    "start:build": "parcel index.ts --target=node",
+    "start": "npm-run-all --parallel start:build start:nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3",
+    "prettier": "^1.13.7",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.5.4",
+    "@types/ramda": "^0.25.35",
+    "parcel-bundler": "^1.9.7",
+    "parcel-plugin-typescript": "^1.0.0",
+    "typescript": "^2.9.2",
+    "npm-run-all": "^4.1.3"
+  }
+}

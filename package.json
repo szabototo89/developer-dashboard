@@ -2,6 +2,9 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "clean": "lerna clean",
+    "preinstall": "npm run clean",
+    "install": "lerna bootstrap --npmClient=yarn",
     "start": "lerna run --stream start"
   },
   "devDependencies": {
