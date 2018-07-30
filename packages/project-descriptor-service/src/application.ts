@@ -26,7 +26,7 @@ export function initializeApplication({ portNumber = 80 } = {}) {
     response.json(npmScripts);
   });
 
-  application.get("/project/dependencies", (request, response) => {
+  application.get("/project/dependency", (request, response) => {
     const packageDescriptor = readNpmPackageDescriptor(getWatchPath());
     const projectDependencies = getProjectDependencies(packageDescriptor);
     response.json(projectDependencies);
