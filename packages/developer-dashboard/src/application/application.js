@@ -31,7 +31,8 @@ export class Application extends Component {
     const project = await fetchAsJson("http://localhost:80/project");
 
     const projectDescriptor = Object.assign({}, project, {
-      scripts: await fetchAsJson("http://localhost:80/project/script")
+      scripts: await fetchAsJson("http://localhost:80/project/script"),
+      dependencies: await fetchAsJson("http://localhost:80/project/dependency")
     });
 
     this.setState(() => ({

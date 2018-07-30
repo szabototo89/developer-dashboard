@@ -12,10 +12,10 @@ export interface NpmPackageDescriptor {
     [key: string]: string;
   };
   dependencies: {
-    [projectName: ProjectName]: ProjectVersion;
+    [projectName: string]: ProjectVersion;
   };
   devDependencies: {
-    [projectName: ProjectName]: ProjectVersion;
+    [projectName: string]: ProjectVersion;
   };
 }
 
