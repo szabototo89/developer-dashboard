@@ -14,13 +14,23 @@ export const ProjectPage = ({ projectDescriptor = {} }) => {
       <CardView label="Author">{projectDescriptor.author}</CardView>
       <CardView label="Repository">{projectDescriptor.repositoryUrl}</CardView>
       <CardView label="Scripts">
-        {projectDescriptor.scripts.map(({ name, command }) => (
-          <CardView label={name}>{command}</CardView>
-        ))}
+          {projectDescriptor.scripts.map(({ name, command }, index) => (
+            <CardView key={index} label={name}>
+              {command}
+            </CardView>
+          ))}
       </CardView>
 
-      <CardView label="Dependencies">
-        <ProjectDependencies dependencies={projectDescriptor.dependencies} />
+      <CardView label="Dependencies/Development Dependencies">
+        <ProjectDependencies
+          dependencies={projectDescriptor.dependencies.filter(
+            ({ isDevelopmentOnly }) => !isDevelopmentOnly
+          )}
+        />
+
+        <ProjectDependencies dependencies={projectDescriptor.dependencies.filter(
+          ({ isDevelopmentOnly }) => isDevelopmentOnly
+        )} />
       </CardView>
     </DashboardPage>
   );
